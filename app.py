@@ -1,3 +1,18 @@
+import streamlit as st
+import pandas as pd
+import json
+
+from pages_data import dreamit_pages
+
+from seo_audit import audit_page
+from scoring import compute_seo_score
+
+from keyword_engine import keyword_strategy_for_page
+from ai_optimizer import generate_seo_optimization
+from engagement_plan import generate_engagement_boost_plan
+
+from report_generator import generate_html_report
+
 # -----------------------------
 # UI Helper Functions
 # -----------------------------
@@ -37,21 +52,6 @@ def show_kv_cards(data: dict):
     for k, v in data.items():
         st.markdown(f"**{str(k).replace('_',' ').title()}**: {v}")
 
-
-import streamlit as st
-import pandas as pd
-import json
-
-from pages_data import dreamit_pages
-
-from seo_audit import audit_page
-from scoring import compute_seo_score
-
-from keyword_engine import keyword_strategy_for_page
-from ai_optimizer import generate_seo_optimization
-from engagement_plan import generate_engagement_boost_plan
-
-from report_generator import generate_html_report
 
 
 # -----------------------------

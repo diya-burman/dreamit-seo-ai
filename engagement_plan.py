@@ -6,7 +6,7 @@ import re
 from openai_helper import get_azure_openai_client
 
 
-# ✅ Simulated traffic data pattern (as required in assignment)
+# Simulated traffic data pattern (as required in assignment)
 SIMULATED_TRAFFIC_PATTERN = {
     "high_traffic_days": ["Monday", "Wednesday", "Friday"],
     "medium_traffic_days": ["Tuesday", "Thursday"],

@@ -4,12 +4,12 @@
 from keybert import KeyBERT
 
 
-# ✅ load model once (very important)
+# load model once (very important)
 # "all-MiniLM-L6-v2" is lightweight + fast
 kw_model = KeyBERT(model="all-MiniLM-L6-v2")
 
 
-# ✅ Simulated trending keywords (you can expand this list)
+# Simulated trending keywords (you can expand this list)
 TRENDING_KEYWORDS = {
     "power_bi": [
         "Power BI dashboard examples",
@@ -35,7 +35,7 @@ TRENDING_KEYWORDS = {
 }
 
 
-# ✅ Service keyword clusters (simple but looks good in interviews)
+# Service keyword clusters 
 KEYWORD_CLUSTERS = {
     "Power BI Services": [
         "power bi",
@@ -170,16 +170,16 @@ def keyword_strategy_for_page(page: dict, top_n: int = 10):
     """
     content = page.get("content", "")
 
-    # ✅ KeyBERT extraction
+    # KeyBERT extraction
     extracted = extract_keywords_keybert(content, top_n=top_n)
 
-    # ✅ clustering
+    # clustering
     clusters = cluster_keywords(extracted)
 
-    # ✅ trending (simulated)
+    # trending (simulated)
     trending = get_trending_keywords_for_page(page)
 
-    # ✅ long-tail suggestions
+    # long-tail suggestions
     primary_kw = page.get("primary_keyword", "")
     long_tail = generate_long_tail_keywords(primary_kw)
 

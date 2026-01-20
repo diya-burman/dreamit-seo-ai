@@ -1,0 +1,17 @@
+streamlit
+
+pandas
+
+textstat
+
+keybert
+
+sentence-transformers
+
+python-dotenv
+
+azure-identity
+
+azure-keyvault-secrets
+
+openai
